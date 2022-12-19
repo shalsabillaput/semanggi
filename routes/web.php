@@ -31,21 +31,21 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
-Route::get('/signup', [SignupController::class, 'index']);
-Route::post('/signup', [SignupController::class, 'store']);
+Route::get('/signup', [SignupController::class, 'index'])->middleware('guest');
+Route::post('/signup', [SignupController::class, 'store'])->middleware('guest');
 
 Route::get('/detailproduk/{slug}', [BarangController::class, 'show']);
 
-Route::get('/cart', [CartController::class, 'index']);
-Route::post('/cart', [CartController::class, 'store']);
+Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
+Route::post('/cart', [CartController::class, 'store'])->middleware('auth');
 
-Route::post('/update', [CartController::class, 'update']);
+Route::post('/update', [CartController::class, 'update'])->middleware('auth');
 
-Route::post('/remove', [CartController::class, 'destroy']);
+Route::post('/remove', [CartController::class, 'destroy'])->middleware('auth');
 
 Route::get('/checkout', function () {
     return view('checkout');

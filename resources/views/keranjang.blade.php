@@ -51,7 +51,7 @@
                                             <form action="/remove" method="POST">
                                                 @csrf
                                                 <input type="hidden" value="{{ $item->id }}" name="id">
-                                                <button><span class="icon_close"></span></button>
+                                                <button onclick="return confirm('Apakah anda yakin untuk menghapus Cart {{ $item->nama }}?')"><span class="icon_close"></span></button>
                                             </form>
                                             {{-- <span class="icon_close"></span> --}}
                                         </td>
@@ -95,7 +95,7 @@
                                 ?>
                             </span></li>
                         </ul>
-                        <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+                        <a href="/checkout" class="primary-btn">PROCEED TO CHECKOUT</a>
                     </div>
                 </div>
             </div>

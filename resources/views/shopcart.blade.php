@@ -103,7 +103,7 @@
                             <li>Subtotal <span>Rp 90.000</span></li>
                             <li>Total <span>Rp 90.000</span></li>
                         </ul>
-                        <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+                        <a href="/checkout" class="primary-btn">PROCEED TO CHECKOUT</a>
                     </div>
                 </div>
             </div>
