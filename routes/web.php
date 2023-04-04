@@ -47,6 +47,19 @@ Route::post('/update', [CartController::class, 'update'])->middleware('auth');
 
 Route::post('/remove', [CartController::class, 'destroy'])->middleware('auth');
 
+//tolong lebokno bayy ehehehe
 Route::get('/checkout', function () {
     return view('checkout');
+});
+
+Route::get('/pembayaran', function () {
+    return view('pembayaran');
+});
+
+Route::get('/pembayaran/kode-unik', function () {
+    return view('kodepembayaran');
+});
+
+Route::get('/admin/home', function () {
+    return view('layouts.navbarAdm');
 });

@@ -78,7 +78,10 @@
                 </div>
               </div>
                 {{-- <button type="button" class="btn p-0 ms-auto"><i class="fa fa-search"></i></button> --}}
-                <a type="button" class="btn p-0 ms-auto" href="/cart"><i class="fa fa-shopping-cart"></i></a>
+                <a type="button" class="btn p-0 ms-auto" href="/cart"><i class="fa fa-shopping-cart"></i>
+                </a>
+                
+
             <div class="nav-item dropdown ms-auto">
                 @auth
                     <li class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: black">{{ auth()->user()->username }}</li>

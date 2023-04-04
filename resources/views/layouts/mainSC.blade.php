@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -101,8 +100,6 @@
     <script src="det/js/mixitup.min.js"></script>
     <script src="det/js/owl.carousel.min.js"></script>
     <script src="det/js/main.js"></script>
-
-
 </body>
 
 </html>

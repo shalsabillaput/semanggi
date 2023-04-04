@@ -35,7 +35,7 @@ h2 {
   @media (max-width: 1199.98px) {
     .half .contents, .half .bg {
       width: 100%; } }
-  .half .contents .form-group, .half .bg .form-group {
+  /* .half .contents .form-group, .half .bg .form-group {
     margin-bottom: 0;
     border: 1px solid #efefef;
     padding: 15px 15px;
@@ -46,8 +46,8 @@ h2 {
     .half .contents .form-group.last, .half .bg .form-group.last {
       border-bottom: 1px solid #efefef;
       border-bottom-left-radius: 7px;
-      border-bottom-right-radius: 7px; }
-    .half .contents .form-group label, .half .bg .form-group label {
+      border-bottom-right-radius: 7px; } */
+    /* .half .contents .form-group label, .half .bg .form-group label {
       font-size: 12px;
       display: block;
       margin-bottom: 0;
@@ -60,7 +60,7 @@ h2 {
     .half .contents .form-control:active, .half .contents .form-control:focus, .half .bg .form-control:active, .half .bg .form-control:focus {
       outline: none;
       -webkit-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none; } */
 
 .half .bg {
   background-size: cover;

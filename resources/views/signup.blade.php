@@ -33,8 +33,8 @@
 
             <form action="/signup" method="post">
                 @csrf
-                <div class="form-floating mb-3">
-                    <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Full Name" required value="{{ old('name') }}" />
+                <div class="form-floating mb-3 mt-5">
+                    <input type="text" id="name"  class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Full Name" required value="{{ old('name') }}" />
                     <label for="name">Full Name</label>
 
                     @error('name')
@@ -68,9 +68,9 @@
 
                   </div>
 
-                  <div class="form-floating mb-3">
+                  <div class="form-floating mb-3 ">
                     <select class="form-select" name="role_id" id="role_id">
-                        <option selected>Role User</option>
+                        <option selected>Select one</option>
                         <option value="1">Admin</option>
                         <option value="2">User</option>
                     </select>
@@ -98,7 +98,7 @@
                   <div class="pt-1 mb-4">
                     <button class="btn btn-success btn-lg btn-block" type="submit">Sign Up</button>
                   </div>
-              <h6>Already have an account?<a style="color: rgb(135, 135, 215)" href="/login">Login here!</a></h6>
+              <h6>Already have an account? <a style="color: rgb(135, 135, 215)" href="/login">Login here!</a></h6>
 
 
             </form>

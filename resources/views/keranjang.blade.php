@@ -8,31 +8,34 @@
             </div>
         @endif
         <div class="container">
-            <div class="row">
+            <div class="border-bottom">
+                <h4 class="mb-3">Keranjang Saya</h4>
+            </div>
+            <div class="row mt-3">
                 <div class="col-lg-12">
-                    <div class="">
                         <table>
                             <thead>
                                 <tr>
-                                    <th class="col-lg-4">Products</th>
-                                    <th class="col-lg-2">Price</th>
-                                    <th class="col-lg-1">Quantity</th>
+                                    <th class="col-lg-3">Produk</th>
+                                    <th class="col-lg-2">Harga</th>
+                                    <th class="col-lg-3">Quantity</th>
                                     <th class="col-lg-2">Action</th>
-                                    <th class="col-lg-2">Total</th>
+                                    <th class="col-lg-2">Subtotal Produk</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($items as $item)
                                     <tr>
-                                        <td class="col-lg-5">
-                                            <img src="img/cart/cart-1.jpg" alt="">
-                                            <h5>{{ $item->nama }}</h5>
+                                        <td class="col-3">
+                                            {{-- <img src="img/cart/cart-1.jpg" alt=""> --}}
+                                            <h6>{{ $item->nama }}</h6>
                                         </td>
-                                        <td class="fw-bold">
+
+                                        <td class="">
                                             Rp {{ $item->harga }}
                                         </td>
-                                        <td class="">
+                                        <td class="col-2">
                                             <div class="">
                                                 <form action="/update" method="POST">
                                                     @csrf
@@ -44,10 +47,10 @@
                                                 </form>
                                             </div>
                                         </td>
-                                        <td class="">
+                                        <td class="col-2">
                                             Rp {{ $item->harga*$item->quantity }}
                                         </td>
-                                        <td class="">
+                                        <td class="col-2">
                                             <form action="/remove" method="POST">
                                                 @csrf
                                                 <input type="hidden" value="{{ $item->id }}" name="id">
@@ -59,18 +62,9 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="mt-4">
-                        <a href="/catalog" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-                        <a href="#" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
-                            Upadate Cart</a>
-                    </div>
-                </div>
-                <div class="col-lg-12">
+
+                <div class="col-lg-12 mt-5">
                     <div class="shoping__checkout">
                         <h5>Cart Total</h5>
                         <ul>
@@ -85,7 +79,8 @@
                                 ?>
                                 </span>
                             </li>
-                            <li>Subotal <span>Rp
+
+                            <li>Subtotal <span>Rp
                                 <?php
                                     $jumlah=0;
                                     foreach ($items as $item) {
@@ -95,9 +90,17 @@
                                 ?>
                             </span></li>
                         </ul>
-                        <a href="/checkout" class="primary-btn">PROCEED TO CHECKOUT</a>
+                        {{-- <a href="/checkout" class="primary-btn">PROCEED TO CHECKOUT</a> --}}
                     </div>
                 </div>
+
+                <div class="col-lg-12">
+                    <div class="mt-4">
+                        <a href="/catalog" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
+                        <a href="/checkout" class="primary-btn cart-btn cart-btn-right">CHECKOUT</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
