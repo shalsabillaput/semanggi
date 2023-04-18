@@ -17,7 +17,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/stylelogin.css">
 
-    <title>Login Semanggi Store</title>
+    <title>Login Semanggi's Store</title>
   </head>
   <body>
 
